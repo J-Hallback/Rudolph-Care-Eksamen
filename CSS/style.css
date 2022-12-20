@@ -1,0 +1,710 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*-------- STYLING BEGINS---------*/
+
+
+/*------ Font style ----*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Spectral:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+body{
+    font-family: 'Spectral', serif;
+    background-color: #f2f1f0;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Cinzel', serif;
+}
+
+
+/*---Main Layout---*/
+.container{
+    width: 100%;
+}
+
+/*---Styling af return til top knap---*/ 
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: 1px solid rgba(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), 0.75);
+    background-color: #f2f1f0;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  #myBtn:hover {
+    background-color: #555;
+  }
+
+
+
+/*---NAV---*/
+.topnav{
+    /* padding:1% 5% 1% 5%; */
+    min-height: 60px;
+    background-color: #e9dcd3;
+    font-size: 1.2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#myLinks {
+    margin-top:60px;
+    display: none;
+  }
+
+.topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+.topnav a.iconBurger {
+    color: black;
+    background-color: #e9dcd3;
+    display:block;
+    position: absolute;
+    left: 0;
+    top: 10px;
+  }
+
+.topnav a.iconTaske {
+    color: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+
+.topnav a.Logo {
+    color: black;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+ .topnav a:hover {
+    background-color: #f2f1f0;
+    color: black;
+  }
+
+.active {
+    background-color: #f2f1f0;
+    color: white;
+  }
+
+  /*---Nav logo---*/
+.rc_logo_nav{
+    width: 76px;
+    margin: auto;
+}
+
+/*---header/video---*/
+.headerVideo{ 
+max-width: 100%;
+}
+
+
+/*--- content (Produkter)---*/
+main{
+    min-height: 200px;
+}
+
+.contentType1{
+background-color: #e9dcd3;
+margin-top: 0.75em;
+color: black;
+width: 100%;
+min-height: 100px;
+position: relative;
+}
+
+.contentType1 h5{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.3rem;
+}
+
+.contentType1 p{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 1em;
+    line-height: 20pt;
+}
+
+
+/*----Produkbox/ Cards----*/
+.produktbox{
+    background-color: #e9dcd3;
+    width: 95%;
+    margin: auto;
+    min-height: 200px;
+    margin-top: 0.75em;
+    display: flex;
+}
+
+.produktboxCard{
+    width: 33.3%;
+    height: 210px;
+    padding: 0.75em;
+    position: relative;
+    border-left: 2px solid #f2f1f0;
+    border-right: 2px solid #f2f1f0;
+
+}
+
+.produktboxCard img{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.produktboxCard h5{
+    transform: rotate(90deg);
+    position: absolute;
+    font-size: 30pt;
+    top: 2.4em;
+    left: -2.4em;
+}
+
+/*----ProdukDropDown/ From Cards----*/
+#TravelSize, #TravelSize2, 
+#SingleSize, #SingleSize2,
+#FamilieSize, #FamilieSize2{
+    display: none;
+}
+
+.produktdropdownSpacer{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.produktdropdown{
+    background-color: #e9dcd3;
+    width: 95%;
+    margin: auto;
+    min-height: 200px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.produktboxdropdown{
+    flex: 100%;
+    min-height: 210px;
+    padding: 0.5em;
+    padding-top: 0;
+    z-index: 10;
+    position: relative;
+    display: flex;
+}
+
+.produktboxdropdown img{
+    width: 100%;
+    bottom: 0;
+}
+
+.produktboxdropdown a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    flex: 33,3%;
+    padding: 1em;
+}
+
+.produktboxdropdown h5{
+    text-align: center;
+    font-size: 12pt;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+}
+
+/*----collapsible spacer---*/
+.dSelect{
+    background-color: #e9dcd3;
+    height: 5px;
+    position: relative;
+    border-left: 2px solid #f2f1f0;
+    border-right: 2px solid #f2f1f0;
+    align-self:auto;
+    flex-basis: auto;
+    flex: 33.3%;
+}
+.dNotSelect{
+    background-color: #f2f1f0;
+    height: 5px;
+    position: relative;
+    border-left: 2px solid #f2f1f0;
+    border-right: 2px solid #f2f1f0;
+    align-self: auto;
+    flex-basis: auto;
+    flex: 33.3%;
+}
+
+
+/*---Udforsk knap under card--*/
+.cardUdforsk{
+    margin: auto;
+    background-color: #f2f1f0;
+    display: block;
+    outline: 1px solid rgba(162, 138, 126, 0.5);
+    position: absolute;
+    padding: 0.5em;
+    bottom: 2px;
+    right: 3px;
+    z-index: 5;
+    text-decoration: none;
+}
+
+.cardUdforsk h4{
+    color: black;
+    font-size: 1.2rem;
+}
+
+.produktDropdown{
+    width: 100%;
+    height: 410px;
+    padding: 0.75em;
+    position: relative;
+    outline: 2px solid #f2f1f0;
+}
+
+
+/*--Fade img & flex big (FB) billeder--*/
+.FadeImg{
+    width: 100%;
+    background-color: #e9dcd3;
+}
+
+.FBImg{
+    display: none;
+}
+
+
+/*--- Udforsk knap ---*/
+.contentType2Udforsk{
+    margin: auto;
+    background-color: #f2f1f0;
+    display: block;
+    outline: 1px solid rgba(162, 138, 126, 0.5);
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    padding: 0.5em;
+    width: 45%;
+    text-decoration: none;
+}
+
+.contentType2Udforsk h4{
+    color: black;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/*---- Underside - Produkt Content----*/
+
+.ProduktContent{
+    background-color: #e9dcd3;
+    width: 100%;
+    min-height: 200px;
+    margin-top: 0.75em;
+    position: relative;
+    min-height: 300px;
+    padding: auto;
+}
+
+.ProduktContent div{
+    min-height: 500px;
+    position: relative;
+    padding-bottom: 1.1em;
+    margin-top: 3em;
+}
+
+.ProduktContent > h4{
+    color: black;
+    padding-left: 1em;
+    padding-top: 1em;
+    margin-bottom: 0.75em;
+    font-size: 1.5rem;
+}
+
+.ProduktContent div h4{
+    font-size: 1.3rem;
+    text-align: center;
+    position: relative;
+    padding: 0.5em;
+}
+
+.ProduktContent div img{
+    margin-bottom: 4em;
+    outline: 1px solid rgba(162, 138, 126, 0.5);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+/*-----Journal----*/
+.ProduktContentJournal{
+    width: 100%;
+    margin: auto;
+    min-height: 600px;
+    position: relative;
+    padding: auto;
+    margin-bottom: 2em;
+}
+
+.ProduktContentJournal div{
+    min-height: 100px;
+    position: relative;
+    margin-top: 1.1em;
+    background-color: #e9dcd3;
+    width: 75%;
+    margin: auto;
+}
+
+.ProduktContentJournal div:first-child{
+    margin-top: 3em;
+    margin-bottom: 0.2em;
+}
+
+.ProduktContentJournal > h4{
+    color: black;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    margin-bottom: 0.75em;
+    font-size: 1.5rem;
+}
+
+.ProduktContentJournal p {
+    color: black;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    margin-bottom: 0.75em;
+    font-size: 1rem;
+    line-height: 17pt;
+}
+
+.ProduktContentJournal div h4{
+    font-size: 1.3rem;
+    position: relative;
+    padding: 0.5em 0.5em 1em;
+}
+
+.ProduktContentJournal div img{
+    outline: 1px solid rgba(162, 138, 126, 0.5);
+    position: relative;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+}
+.ProduktContentJournal div a{
+    font-size: 12pt;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    margin-top: 1em;
+}
+.ProduktContentJournal div a h4{
+    font-size: 12pt;
+    padding: 0.5em;
+}
+
+
+/*--- FOOTER---*/
+footer{
+    margin-top: 0.75em;
+    background-color: #e9dcd3;
+    overflow: hidden;
+    position: relative;
+    bottom:0;
+    width: 100%;
+    display: block;
+}
+
+/*--- referencer under footer---*/
+footer > div{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.footerLinks{
+    flex: 50%;
+    margin-bottom: 1em;
+
+}
+
+/*----- overskriver -----*/
+.footerLinks h5{
+    padding: 3%;
+    display: block;
+    font-size: 1.3rem;
+}
+
+/*----- under emner -----*/
+.footerLinks a{
+    padding: 3%;
+    width: 100%;
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.footerLinks a:hover {
+    background-color: #e9dcd3;
+    color: black;
+}
+
+.footerLinks a:active{
+    background-color: #f2f1f0;
+    color: black;
+}
+
+
+/*--- 404 NOT FOUND---*/
+.img404{
+    background-color: #e9dcd3;
+    width: 100%;
+    z-index: -4;
+}
+
+#tilbage{
+    padding-bottom: 2em;
+}
+
+
+
+/*---Tablet---*/
+@media only screen and (min-width: 768px)  {
+
+    /*--styling for 2 card per række--*/
+    .ProduktContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .ProduktContent div {
+        flex: 50%;
+        
+    }
+    .ProduktContentJournal{
+        float: left;
+        width: 50%;
+        margin-top: 0;
+        
+    }
+
+    /*--Journal- ClearF bliver brugt her for at få 2 stk card på række
+        da det ikke lykkes med flex --*/
+    .clearF{
+        clear: left;
+    }
+
+}
+
+
+
+/*---laptop---*/
+@media only screen and (min-width: 1200px)  {
+    /*--Små justeringer i bredelse i skærmen--*/
+    .headerVideo{
+        width: 70%;
+        margin-left: 15%;
+        
+    }
+
+    /*-- styling af nav, så den bliver synlig uden burger ikon mm--*/
+    .topnav{
+        /* padding:1% 5% 1% 5%; */
+        min-height: 60px;
+        background-color: #e9dcd3;
+        font-size: 1.2rem;
+        position: relative;
+        padding-left: 107px;
+    }
+    
+    #myLinks {
+        margin-top:10px;
+        display: block;
+      }
+    
+    .topnav a {
+        float: left;
+        color: black;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+    
+     .topnav a:hover {
+        background-color: #c0a2847e;
+        color: black;
+      }
+
+      /*--burger ikon gemt--*/
+    .topnav a.iconBurger {
+        display:none;
+    }
+
+    /*--ny position for logo. var i midten på tablet & mobil ver.--*/
+    .topnav a.Logo {
+        position: absolute;
+        top: 0;
+        left: -107px;
+        transform: translateX(0%);
+    }
+
+    .topnav a:hover {
+        background-color: #f2f1f0;
+        color: black;
+    }
+
+    /*--Styling af content på dekstop, samt justeringaf hvordan flex skal opfører sig--*/
+    .ProduktContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .ProduktContent div {
+        flex: 33.3%;
+        
+    }
+    .ProduktContentJournal{
+        flex: 33.3%;
+        margin-top: 0;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 70%;
+        margin: auto;
+        position: relative;
+    }
+    .footerLinks{
+        flex: 25%;
+    }
+
+    /*--Billede fra mobil ver, som bliver gemt--*/
+    .FadeImg{
+        display: none;
+    }
+
+    /*--Styling af de forskellige billede til desktop--*/
+    .FBImg{
+        display: flex;
+        width: 100%;
+        background-color: #e9dcd3;
+    }
+    .F100{
+        flex: 66.6%;
+    }
+    /*--flexboxen til tesk--*/
+    .FB{
+        flex: 66.6% !important;
+    }
+    /*--flexboxen til billeder- often til teksten--*/
+    .FS{
+        flex: 33.3% !important;
+    }
+}
+
+
+/*---big screen---*/
+@media only screen and (min-width: 2000px)  {
+    /*-- små justeringer til større skærm 
+    overall søger for at samle det hele lidt mere på midten--*/
+    .ProduktContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .ProduktContent div {
+        flex: 33.3%;
+        
+    }
+    .headerVideo{
+        width: 60%;
+        margin-left: 20%;
+        
+    }
+    .container{
+        width: 60%;
+        margin: auto;
+        position: relative;
+    }
+    .footerLinks{
+        flex: 25%;
+    }
+
+    /*-- Billeder fra mobil ver bliver gemt--*/
+    .FadeImg{
+        display: none;
+    }
+}
